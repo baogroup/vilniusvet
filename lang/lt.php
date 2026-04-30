@@ -60,6 +60,7 @@ return [
     'blog.lead' => 'Naudingi veterinarijos patarimai gyvūnų šeimininkams.',
     'footer.privacy' => 'Privatumo politika',
     'footer.cookies' => 'Slapukų politika',
+    'footer.support' => 'Svetainės priežiūra ir techninis palaikymas',
     'cookie.text' => 'Šioje svetainėje naudojame būtinus slapukus, kad svetainė veiktų tinkamai. Nebūtinus slapukus naudojame tik gavę jūsų sutikimą.',
     'cookie.accept' => 'Priimti visus',
     'cookie.reject' => 'Atmesti nebūtinus',
