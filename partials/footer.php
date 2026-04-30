@@ -12,6 +12,7 @@
         <div>
             <strong>Informacija</strong>
             <p><a href="<?= e(url_for('privacy', $lang)) ?>"><?= e(tr($t, 'footer.privacy')) ?></a><br><a href="<?= e(url_for('cookies', $lang)) ?>"><?= e(tr($t, 'footer.cookies')) ?></a></p>
+            <p class="footer-credit"><?= e(tr($t, 'footer.support')) ?> — <a href="https://baogroup.eu/" target="_blank" rel="noopener">BaoGroup.eu</a></p>
         </div>
     </div>
 </footer>
