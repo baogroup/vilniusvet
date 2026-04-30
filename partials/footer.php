@@ -16,6 +16,6 @@
     </div>
 </footer>
 <?php require __DIR__ . '/cookie-banner.php'; ?>
-<script src="assets/js/app.js"></script>
+<script src="/assets/js/app.js"></script>
 </body>
 </html>
