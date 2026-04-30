@@ -15,7 +15,7 @@ function contact_url_for_lang(string $lang): string {
     $slugs = [
         'lt' => 'kontaktai',
         'en' => 'contacts',
-        'ru' => 'kontaktai',
+        'ru' => 'kontakty',
     ];
     return '/' . rawurlencode($lang) . '/' . ($slugs[$lang] ?? 'kontaktai') . '/';
 }
