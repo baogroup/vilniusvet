@@ -9,6 +9,8 @@ return [
     'phone' => '(8-5) 248 2966',
     'phone_href' => '+37052482966',
     'email' => 'info@vilnius.vet',
+    'form_recipient' => 'info@vilnius.vet',
+    'form_sender' => 'no-reply@vilnius.vet',
     'languages' => ['lt', 'en', 'ru'],
     'default_lang' => 'lt',
     'working_hours' => [
