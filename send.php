@@ -11,8 +11,17 @@ function clean_input(string $value): string {
     return trim(str_replace(["\r", "\0"], '', $value));
 }
 
+function contact_url_for_lang(string $lang): string {
+    $slugs = [
+        'lt' => 'kontaktai',
+        'en' => 'contacts',
+        'ru' => 'kontaktai',
+    ];
+    return '/' . rawurlencode($lang) . '/' . ($slugs[$lang] ?? 'kontaktai') . '/';
+}
+
 function redirect_back(string $lang, string $status): never {
-    header('Location: /' . rawurlencode($lang) . '/kontaktai/?status=' . rawurlencode($status));
+    header('Location: ' . contact_url_for_lang($lang) . '?status=' . rawurlencode($status));
     exit;
 }
 
