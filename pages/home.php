@@ -32,8 +32,8 @@
         <div class="service-cards">
             <?php foreach (array_slice($services, 0, 6) as $category): ?>
                 <article class="card">
-                    <h3><?= e($category['category']) ?></h3>
-                    <p><?= e($category['items'][0]['title']) ?> — nuo <?= e($category['items'][0]['price']) ?> €</p>
+                    <h3><?= e($category['category'][$lang] ?? $category['category']['lt']) ?></h3>
+                    <p><?= e($category['items'][0]['title'][$lang] ?? $category['items'][0]['title']['lt']) ?> — <?= e($category['items'][0]['price']) ?> €</p>
                 </article>
             <?php endforeach; ?>
         </div>
@@ -45,13 +45,13 @@
         <div>
             <h2><?= e(tr($t, 'section.about')) ?></h2>
             <p><?= e(tr($t, 'about.short')) ?></p>
-            <a class="text-link" href="<?= e(url_for('about', $lang)) ?>"><?= e(tr($t, 'nav.about')) ?> →</a>
+            <a class="text-link" href="<?= e(url_for('about', $lang)) ?>"><?= e(tr($t, 'cta.about')) ?> →</a>
         </div>
         <div class="facts-grid">
-            <div><strong>1993</strong><span>metai</span></div>
-            <div><strong>30+</strong><span>metų patirties</span></div>
-            <div><strong>2</strong><span>gydytojai</span></div>
-            <div><strong>LT / RU / PL</strong><span>kalbos</span></div>
+            <div><strong>1993</strong><span><?= e(tr($t, 'why.experience.title')) ?></span></div>
+            <div><strong>30+</strong><span><?= e(tr($t, 'why.experience.text')) ?></span></div>
+            <div><strong>2</strong><span><?= e(tr($t, 'section.doctors')) ?></span></div>
+            <div><strong>LT / RU / PL</strong><span><?= e(tr($t, 'contacts.languages')) ?></span></div>
         </div>
     </div>
 </section>
