@@ -13,6 +13,7 @@ DirectoryIndex index.php
     # Pretty multilingual URLs
     RewriteRule ^(lt|en|ru)/?$ index.php?lang=$1&page=home [L,QSA]
     RewriteRule ^(lt|en|ru)/([^/]+)/?$ index.php?lang=$1&slug=$2 [L,QSA]
+    RewriteRule ^(lt|en|ru)/(tinklarastis|blog)/([^/]+)/?$ index.php?lang=$1&slug=$2&article=$3 [L,QSA]
 
     # Fallback to front controller
     RewriteRule ^.*$ index.php [L,QSA]
