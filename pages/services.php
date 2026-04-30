@@ -9,11 +9,11 @@
     <div class="container price-list">
         <?php foreach ($services as $category): ?>
             <section class="price-category">
-                <h2><?= e($category['category']) ?></h2>
+                <h2><?= e($category['category'][$lang] ?? $category['category']['lt']) ?></h2>
                 <div class="price-table">
                     <?php foreach ($category['items'] as $item): ?>
                         <div class="price-row">
-                            <span><?= e($item['title']) ?></span>
+                            <span><?= e($item['title'][$lang] ?? $item['title']['lt']) ?></span>
                             <strong><?= e($item['price']) ?> €</strong>
                         </div>
                     <?php endforeach; ?>
