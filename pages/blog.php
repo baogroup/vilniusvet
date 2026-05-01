@@ -1,5 +1,10 @@
 <?php
-$articles = require __DIR__ . '/../data/articles.php';
+$articlesMain = require __DIR__ . '/../data/articles.php';
+$articlesExtra = file_exists(__DIR__ . '/../data/articles-extra.php')
+    ? require __DIR__ . '/../data/articles-extra.php'
+    : [];
+
+$articles = array_merge($articlesMain, $articlesExtra);
 $blogBase = url_for('blog', $lang);
 ?>
 
