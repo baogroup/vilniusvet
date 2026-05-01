@@ -3,8 +3,11 @@ $articlesMain = require __DIR__ . '/../data/articles.php';
 $articlesExtra = file_exists(__DIR__ . '/../data/articles-extra.php')
     ? require __DIR__ . '/../data/articles-extra.php'
     : [];
+$articlesVaccination = file_exists(__DIR__ . '/../data/articles-vaccination.php')
+    ? require __DIR__ . '/../data/articles-vaccination.php'
+    : [];
 
-$articles = array_merge($articlesMain, $articlesExtra);
+$articles = array_merge($articlesMain, $articlesExtra, $articlesVaccination);
 $blogBase = url_for('blog', $lang);
 ?>
 
